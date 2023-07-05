@@ -45,4 +45,4 @@ while True:
         print("Sorry, that's too low. Guess again.")
     else:
         print("Sorry, that's too high. Guess again.")     
-        print("sorry")
+        

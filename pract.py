@@ -5,7 +5,7 @@ def factorial(n):
     for i in range(2, n+1):
         result *= i
     return result
-print(factorial(5))    
+print(factorial(10))    
 
 # Write a Python program to check whether 
 # a given string is a palindrome or not.
@@ -133,3 +133,76 @@ print(dat("hello hello gloria,hello gloria my beautiful gloria"))
 
 # Write a Python function to check 
 # whether a given number is prime or not.
+num =13
+
+def isprime(num):
+   num<=1
+   print("num is not a prime")
+for n in range(2,num):
+     if num%n==0:
+      print( "num is not a prime ")
+      break
+     else:
+        print("num is prime")
+    #  print(isprime(13))
+
+
+
+
+class Feedback:
+    def __init__(self,customer,message):
+        self.customer = customer
+        self.message = message
+
+    def display(self):
+         return f"Hello {self.message}"
+        
+    def get_customer(self):
+       return self.customer
+
+    def get_message(self):
+      return self.message
+
+
+class Book:
+   def __init__(self, tittle,author,publicationYear):
+      self.tittle=tittle
+      self.author=author
+      self.publicationYear=publicationYear
+   
+   def reading(self) :
+      return f"iam reading {self.tittle} by {self.author} produce in {self.publicationYear}" 
+class Novel(Book):
+      def __init__(self, tittle,author,publicationYear,genre):
+         super().__int__(tittle,author,publicationYear)
+         self.genre=genre
+      def readig(self):
+            return f"iam reading {self.tittle} by {self.author} produce in {self.publicationYear} with a unque {self.genre}"
+         
+class Textbook(Book):
+       def __init__(self, tittle, author, publicationYear,subject):
+          super().__init__(tittle, author, publicationYear) 
+          self.subject=subject
+       def readg(self):
+            return f"iam reading {self.tittle} by {self.author} produce in {self.publicationYear} with a unque {self.subject}" 
+
+
+class Magagine(Book):
+   def __init__(self, tittle, author, publicationYear,issuenumber):
+      super().__init__(tittle, author, publicationYear)
+      self.issuenumber=issuenumber
+   def readng(self):
+            return f"iam reading {self.tittle} by {self.author} produce in {self.publicationYear} with a unque {self.issuenumber}" 
+
+
+books =Book("Pride of predices","Charles","2023")
+print(books.reading())
+lat =Novel("beautiful queen","Lado","2021","lovely")
+print(lat.readig())
+obj2 =Textbook("Born a crime","Noah travor","1984","story")
+print(obj2.readg())
+obj3 =Magagine("Child in the forest","Gloria","2000","20")
+print(obj3.readng())
+      
+   
+
